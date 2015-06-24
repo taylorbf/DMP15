@@ -1,4 +1,4 @@
-# Class 1: Shapes and Movement
+# Shapes and Movement
 
 
 

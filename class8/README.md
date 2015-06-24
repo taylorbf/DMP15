@@ -1,4 +1,6 @@
-# Class 1: Shapes and Movement
+# Show and Tell
+
+### + Playtime! Networks, Recursion, Video, etc.
 
 
 
@@ -8,9 +10,6 @@
 
 
 
-## Reference
-
-Fry & Raes, Chs ...
 
 
 ## Context
