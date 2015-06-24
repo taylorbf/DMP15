@@ -2,20 +2,15 @@
 
 
 
-## Structure of a Sketch
+## Code
 
-#### Setup
-
-## Shapes
-
-
-## Variables
+#### Keyword
 
 
 
 ## Reference
 
-Fry & Raes, Chs 3 & 4.
+Fry & Raes, Chs ...
 
 
 ## Context
