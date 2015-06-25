@@ -4,9 +4,38 @@
 
 ## Structure of a Sketch
 
-#### Setup
+#### Setup and Draw
+
+```
+// this function gets called once when the sketch loads
+
+void setup() {
+
+}
+
+
+// this function gets called at 60 fps
+
+void draw() {
+
+}
+```
 
 ## Shapes
+
+#### point
+Draw a point at an x/y position
+
+point( x, y )
+
+```
+point(10,10)
+```
+
+#### 2D shapes
+
+![Basic Processing Shapes](/images/shapes.png)
+
 
 
 ## Variables
