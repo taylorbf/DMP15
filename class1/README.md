@@ -1,6 +1,8 @@
 # Shapes and Movement
 
+This tutorial is for creating visual art within the [Processing](http://processing.org) programming environment. 
 
+Processing is built upon the language of Java. Many components of this language can be used in Java and other popular languages.
 
 ## Structure of a Sketch
 
@@ -121,7 +123,7 @@ x = x + 2
 
 ## Reference
 
-Fry & Raes, Chs 3 (Shapes) & 4 (Variables)
+Fry & Raes, Ch 3 (Shapes) & Ch 4 (Variables)
 
 
 ## Context
@@ -133,4 +135,6 @@ What kind of shapes and variables do you see in your daily life?
 
 ## Assignment
 
-Bring in a sketch to present at the beginning of Day 2.
+• Bring in a sketch to present at the beginning of Day 2.
+
+• Bring in a real world example of each type of variable we discussed (String, integer, float, boolean). *Example: A boolean in my daily life is a lightswitch (it is either on or off).*
