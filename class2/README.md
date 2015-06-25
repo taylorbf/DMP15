@@ -86,7 +86,7 @@ Consider examples from your life in which your interaction with an object change
 
 ## Assignment
 
-• Project 1: Create an interactive artwork. Due Day 4.
+• Project 1: Create an interactive artwork using Processing. **Due Day 4.**
 
 • Bring in an example of logic you see in your daily life. 
 

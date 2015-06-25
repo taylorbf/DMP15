@@ -99,13 +99,21 @@ A float number may be either a whole number or decimal.
 
 A String is a piece of text. Specifically, it is non-code text, like regular English.
 
-`String greeting = "Yo, what's up?"`
+```
+String greeting = "Yo, what's up?"
+```
 
 A string has a length.
 
 ```
 int x = greeting.length
-// x now equals 14
+```
+
+`x` now equals 14, because that's how many characters the text has:
+
+```
+Y o ,   w h a t ' s     u  p  ?
+1 2 3 4 5 6 7 8 9 10 11 12 13 14
 ```
 
 ## Operators
@@ -115,10 +123,13 @@ Variables or numbers may be operated on after they are defined
 ```
 int x = 10
 x = x / 2
-// x is now 5
-x = x + 2
-// x is now 7
 ```
+x is now 5
+
+```
+x = x + 2
+```
+x is now 7
 
 
 ## Reference
