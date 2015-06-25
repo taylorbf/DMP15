@@ -32,7 +32,37 @@ point( x, y )
 point(10,10)
 ```
 
-#### 2D shapes
+
+
+#### line
+Draw a line from one x/y position to a second x/y position
+
+line( x1, y1, x2, y2 )
+
+```
+line(10,10,40,20)
+```
+
+#### rectangle
+Draw a rectangle at an x/y position, with a certain width and height
+
+rect( x, y, width, height)
+
+```
+rect(10,10,100,20)
+```
+
+#### ellipse
+Draw an ellipse at an x/y position, with a certain horizontal radius and vertical radius.
+
+ellipse( x, y, radius1, radius2 )
+
+```
+ellipse(50,50,30,60)
+```
+
+
+#### 2D shapes review
 
 via Fry and Raes
 
