@@ -35,16 +35,81 @@ if (x < 5) {
 }
 ```
 
+#### if this or that
 
-## Mouse Interaction
+"if x is 5 OR x is 10"
+
+```
+int x = 10
+
+if (x == 5 || x == 10) {
+
+	// code in here will happen
+	
+} 
+```
+
+#### if this and that
+
+"if x is greater than 5 AND less than 15"
+
+```
+int x = 10
+
+if (x > 5 && x < 15) {
+
+   // code in here will happen
+	
+} 
+```
 
 
-## Keyboard Interaction
+## Interaction: Mouse
+
+#### mousePressed()
+
+```
+void mousePressed() {
+
+    // code in here will happen on mouse click
+
+}
+```
+
+Follow the same paradigm for:
+
+#### mouseMoved()
+
+#### mouseReleased()
+
+#### mouseDragged()
+
+#### mouseWheel()
+
+#### mouseMoved()
+
+
+
+## Interaction: Keyboard
+
+#### keyPressed()
+
+```
+void keyPressed() {
+
+    // code in here will happen when you type
+
+}
+```
+
+**keyCode**
+
+Inside the keyPressed function, the `keyCode` variable holds the ASCII value of the letter you typed.
 
 
 ## Logic + Interaction
 
-Logic and interaction work well together. `if` can be used to gain control over interaction.
+Logic and interaction work well together. `if` can be used to control your interaction.
 
 You can model a simple pencil:
 
@@ -52,7 +117,7 @@ You can model a simple pencil:
 void draw() {
 
 	if (mousePressed) {
-		point(mouseX,mouseY,20,20)	
+		point(mouseX,mouseY);
 	}
 
 }
@@ -63,10 +128,10 @@ Or you can set a logical condition on the mouse position:
 ```
 void draw() {
 
-	if (mouseX > 100) {
-		background(255)
+	if (mouseX > 50) {
+		background(255);
 	} else {
-		background(0)
+		background(0);
 	}
 
 }
@@ -74,7 +139,7 @@ void draw() {
 
 ## Reference
 
-Fry & Raes, Ch ...
+Fry & Raes, Chs 5 & 6.
 
 
 ## Context

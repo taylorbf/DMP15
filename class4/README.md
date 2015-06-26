@@ -10,7 +10,7 @@
 
 ## Reference
 
-Fry & Raes, Chs ...
+Fry & Raes, Ch 8.
 
 
 ## Context

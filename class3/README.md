@@ -77,7 +77,7 @@ Notice the use of `weather.length` to fit the loop to the array size.
 
 ## Reference
 
-Fry & Raes, Chs ...
+Fry & Raes, Ch 10
 
 
 ## Context
