@@ -9,7 +9,7 @@ Contact: [benjamin.taylor@goucher.edu](mailto:benjamin.taylor@goucher.edu)
 
 ~
 
-Residency:
+**Residency**
 
 [Class 1: Shapes That Move](https://github.com/taylorbf/DMP15/tree/master/class1)
 <br>[Class 2: Interaction and Logic](https://github.com/taylorbf/DMP15/tree/master/class2)
@@ -23,7 +23,7 @@ Break
 <br>[Class 7: 3D](https://github.com/taylorbf/DMP15/tree/master/class7)
 <br>[Class 8: Fun with Networks, Recursion, &c.](https://github.com/taylorbf/DMP15/tree/master/class8)
 
-Online:
+**Online**
 
 [Class 9: Final Project, Version 1](https://github.com/taylorbf/DMP15/tree/master/week1)
 <br>[Class 10: Final Project, Version 2](https://github.com/taylorbf/DMP15/tree/master/week2)
