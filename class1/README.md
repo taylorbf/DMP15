@@ -16,42 +16,57 @@ void setup() {
 }
 
 
-// the draw function gets called at 60 fps
+// the draw function gets called 60 times per second.
 
 void draw() {
 
 }
 ```
 
+
+## 2D Coordinate Plane
+
+In Processing, the drawing canvas is understood as a 2D coordinate plane. This lets you draw and animate shapes with single-pixel accuracy.
+
+The top left point of the canvas is (0,0). 
+
+Distance is measured in pixels on an **x-axis** (moving to the right) and **y-axis** (moving down).
+
+![2D Canvas](/images/2dplane.png)
+
+Shapes are drawn using (x,y) coordinates.
+
+
+
 ## Shapes
 
 #### point
-Draw a point at an x/y position
+Draw a 1-pixel point at an x/y position.
 
 point( x, y )
 
 ```
-point(10,10)
+point(10,10);
 ```
 
 
 
 #### line
-Draw a line from one x/y position to a second x/y position
+Draw a line from one x/y position to a second x/y position.
 
 line( x1, y1, x2, y2 )
 
 ```
-line(10,10,40,20)
+line(10,10,40,20);
 ```
 
 #### rectangle
-Draw a rectangle at an x/y position, with a certain width and height
+Draw a rectangle at an x/y position, with a certain width and height.
 
-rect( x, y, width, height)
+rect( x, y, width, height )
 
 ```
-rect(10,10,100,20)
+rect(10,10,100,20);
 ```
 
 #### ellipse
@@ -60,7 +75,7 @@ Draw an ellipse at an x/y position, with a certain horizontal radius and vertica
 ellipse( x, y, radius1, radius2 )
 
 ```
-ellipse(50,50,30,60)
+ellipse(50,50,30,60);
 ```
 
 
@@ -74,6 +89,10 @@ via Fry and Raes
 
 ## Variables
 
+Variables are one of the core building blocks of programming. Variables are your way of *remembering information* from one moment to the next. They are also your way of *transforming information*.
+
+This week, we will use them to animate shapes.
+
 It's important to choose the right kind of variable for your needs.
 
 #### Boolean
@@ -86,27 +105,29 @@ A boolean can have one of two values: `true` or `false`. It is like a lightswitc
 
 An integer is a whole number, such as `0`, `1`, `-2`, etc. It cannot be a decimal number.
 
-`int x = 100`
+`int x = 100;`
 
 #### Float
 
-A float number may be either a whole number or decimal.
+A float number may be a decimal number *or* whole number.
 
-`float money = 10.50`
+`float money = 3.50;`
+
+`float fingers = 10;`
 
 
 #### String
 
-A String is a piece of text. Specifically, it is non-code text, like regular English.
+A String is a piece of text. Specifically, it is non-code text, like regular English. A string is surrounded by quotation marks.
 
 ```
-String greeting = "Yo, what's up?"
+String greeting = "Yo, what's up?";
 ```
 
 A string has a length.
 
 ```
-int x = greeting.length
+int x = greeting.length;
 ```
 
 `x` now equals 14, because that's how many characters the text has:
@@ -118,18 +139,39 @@ Y o ,   w h a t ' s     u  p  ?
 
 ## Operators
 
-Variables or numbers may be operated on after they are defined
+Variables may be operated on after they are defined.
 
 ```
-int x = 10
-x = x / 2
+int x = 10;
+x = x / 2;
 ```
 x is now 5
 
 ```
-x = x + 2
+x = x + 2;
 ```
 x is now 7
+
+
+
+## Basic Animation
+
+Using a combination of shapes, variables, and operators, we can make images move.
+
+Study this sketch. What do you think will happen?
+
+```
+int x = 0;
+int y = 10;
+
+void draw() {
+
+   ellipse(x,y,10,10);
+   x = x + 1;
+
+}
+```
+*Remember, draw() gets called over and over again, 60 times per second.*
 
 
 ## Reference
@@ -142,10 +184,10 @@ Fry & Raes, Ch 3 (Shapes) & Ch 4 (Variables)
 
 ## Reflection
 
-What kind of shapes and variables do you see in your daily life?
+What kind of variables do you see in your daily life?
 
 ## Assignment
 
-• Bring in a sketch to present at the beginning of Day 2.
+• Commit an original sketch to GitHub. Due by 7 AM on Day 2.
 
 • Bring in a real world example of each type of variable we discussed (String, integer, float, boolean). *Example: A boolean in my daily life is a lightswitch (it is either on or off).*
