@@ -35,7 +35,7 @@ void draw() {
 
 See the VideoBasic sketch in this folder to try out this code.
 
-## Video Processing: Entering the Matrix
+## Video Processing
 
 Much more can be done to alter the video stream before it is drawn.
 
@@ -47,7 +47,7 @@ Each frame of a video is *just data*. Specifically, it is a long list of numbers
 
 The list of color data is an **Array**. This makes sense, because it is a list of related information.
 
-### Pixel Matrix Access
+### Entering the Matrix
 
 Within the `draw()` function, you can use `video.loadPixels()` to acces the video's array of pixels.
 
