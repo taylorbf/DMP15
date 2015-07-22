@@ -45,7 +45,7 @@ A video is a series of images. Each image is called one "frame" of the video.
 
 Each frame of a video is *just data*. Specifically, it is a long list of numbers. **More specifically, it is a list of color information for each pixel in the video.**
 
-The list of color data is an **Array**. This makes sense, because it is a list of related information.
+This list of color data is an **Array** of colors. This makes sense, because it is a list of related information.
 
 ### Entering the Matrix
 
@@ -147,7 +147,6 @@ float value = red( pxcol );
 ## Context
 
 
-## Reflection
-
-
 ## Assignment
+
+Work on your second midterm assignment, due on the last day of residency. You may use video processing in your project, but you don't have to.
