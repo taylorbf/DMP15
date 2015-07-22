@@ -10,7 +10,7 @@ Sooner or later, you will be sketching out a rabbit:
 rabbitx = 100;
 rabbity = 0;
 
-void rabbitHop() {
+void hop() {
   rabbitx += 10
 }
 
@@ -25,11 +25,11 @@ rabbity = 0;
 rabbit2x = 100;
 rabbit2y = 0;
 
-void rabbitHop() {
+void hop() {
   rabbitx += 10
 }
 
-void rabbit2Hop() {
+void hop2() {
   rabbit2x += 10
 }
 
@@ -44,17 +44,15 @@ There is!
 
 ## Class
 
-Classes are a way to create self-contained, independent objects.
+A class is a way to create many self-contained, independent objects which are similar.
 
 **You can think of a class definition as similar to a template. You can create any number of objects from that template.**
 
 If you turn your bouncing ball into a class, you can then create 100 bouncing balls with little effort.
 
-A class looks like this:
-
 **Definition**
 
-Create the class template.
+Creating the class template will look something like this:
 
 ```
 class Raindrop {
@@ -81,13 +79,13 @@ class Raindrop {
 
 **Instance**
 
-Create an instance of Raindrop
+Creating an instance of the Raindrop is now every easy:
 
 ```
 Raindrop drop = new Raindrop(50)
 ```
 
-Create another instance of Raindrop
+Create another instance of Raindrop:
 
 ```
 Raindrop drop2 = new Raindrop(100)

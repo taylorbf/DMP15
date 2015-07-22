@@ -15,7 +15,6 @@ void setup() {
 }
 
 void draw() {  
-  println(frameRate);
   if (video.available()) {
     /* Read video frame and make it black/white */
     video.read();
