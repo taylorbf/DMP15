@@ -2,13 +2,11 @@
 
 
 
-## Functions
-
-#### void
-
-Function declarations usually begin with the `void` keyword, meaning they do not *return* anything.
+## Function
 
 Functions are encapsulated pieces of code that can be called any number of times, without needing to be copied and pasted.
+
+Function declarations usually begin with the `void` keyword, meaning they do not *return* anything.
 
 First, you declare a function. At this point, the code inside the function grow() will **not** be executed.
 
@@ -34,7 +32,7 @@ grow();
 grow();
 ```
 
-#### Arguments
+#### Argument
 
 Often, you will want to write a function which acts *slightly differently each time*, even if it acts mostly the same.
 
