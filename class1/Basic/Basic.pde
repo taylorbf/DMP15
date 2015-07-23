@@ -19,7 +19,7 @@ void draw() {
   //Erase the whole sketch
   background(255);
   
-  //Draw an rectangle, parameters: x,y,width,height
+  //Draw a rectangle using parameters: x,y,width,height
   rect(0,0,20,20);
   
   //Draw a circle that follows your mouse:
@@ -29,10 +29,10 @@ void draw() {
 }
 
 /* TRY:
-- Deleting the background() so the sketch never erases
+- Deleting the background() code so the sketch never erases
 - Changing the shape that you draw with
 - Changing the colors
-- Making the mouse control some other aspect of a shape.
+- Making the mouse control some other aspect of the sketch.
 - Using random()
 */
 
