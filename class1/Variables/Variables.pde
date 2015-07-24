@@ -1,29 +1,26 @@
-// This is about strokes and variables
 
 // Define a decimal number (float) variable x
-float x = 0;
+int x = 1;
 
 void setup() {
-  
-  size (700,100);
-  
-  //This turns off strokes
-  //noStroke();
-  
+  size (700,100); 
 }
 
 void draw() {
-  
-  //This defines stroke color
+  background(random(255),random(255),random(255));
+  // stroke color
   stroke(0, 100, 200);
-  
-  //Stroke width
+  // stroke width
   strokeWeight(2);
-  
+  // draw a shape
   ellipse(x,50,50,50);
-  
-  x = x+4;
+  x = x + 1;
 }
+
+
+
+
+
 
 /* TRY
 - Use x in as many places as possible!
