@@ -1,4 +1,3 @@
-int x = 0;
 void setup() {
   size(900,900);
   background(245,109,30);
@@ -6,9 +5,6 @@ void setup() {
 void draw() {
   noStroke();
   smooth();
-  fill(7,147,237,25);
-  ellipse(random(x),random(x),200,200);
-  x = x + 5;
   fill(0,26,188,50);
   beginShape();
   vertex(mouseX,mouseY);
