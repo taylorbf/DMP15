@@ -11,16 +11,16 @@ void draw() {
     //ellipse(pmouseX,pmouseY,mouseX,mouseY);
     
     fill(random(255),200,255,45);
-    ellipse(random(980),random(500),49,42);
+    ellipse(random(width),random(height),49,42);
     
     fill(random(150),random(255),45,4);
-    ellipse(random(980),random(500),49,42);
+    ellipse(random(width),random(height),49,42);
     
     fill(random(255),random(255));
-    ellipse(random(980),random(500),random(50),random(42));
+    ellipse(random(width),random(height),random(50),random(42));
     
     fill(random(255),200,255,45);
-    ellipse(random(980),random(500),49,42);
+    ellipse(random(width),random(height),49,42);
     
     
     //stroke(1);
