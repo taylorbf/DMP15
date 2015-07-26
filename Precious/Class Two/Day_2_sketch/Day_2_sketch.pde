@@ -13,14 +13,14 @@ void keyPressed() {
 
 void draw() { 
   //1st region
-  if (x < 120 && mousePressed) {
+  if (x < 120) {
     fill(x/5,100,200,150);
     ellipse(x,random(600),70,70);
   }
     
     x = x + 1;
   //2nd region 
-  if (x > 120 && x < 240 && mousePressed) {
+  if (x > 120 && x < 240) {
     fill(x/5,100,200,120);
     noStroke();
     ellipse(x,random(600),50,50);
@@ -28,7 +28,7 @@ void draw() {
     x = x + 1;
   }
   //3rd region
-  if (x > 240 && x < 360 && mousePressed) {
+  if (x > 240 && x < 360) {
     fill(x/5,100,200,90);
     stroke(0);
     ellipse(x,random(600),30,30);
@@ -36,7 +36,7 @@ void draw() {
     x = x + 1;
   }
   //4th region
-  if (x > 360 && x < 480 && mousePressed) {
+  if (x > 360 && x < 480) {
     fill(x/5,100,200,60);
     noStroke();
     ellipse(x,random(600),50,50);
@@ -44,7 +44,7 @@ void draw() {
     x = x + 1;
   }
   //5th region
-  if (x > 480 && x < 600 && mousePressed) {
+  if (x > 480 && x < 600) {
     fill(x/5,100,200,30);
     stroke(0);
     ellipse(x,random(600),70,70);
@@ -63,17 +63,17 @@ void draw() {
     ellipse(random(600),random(600),40,40);
   }
   
-  if (x >= 2400 && x < 2401 ) {
+  if (x == 2400) {
     fill(0,100,200,150);
     ellipse(100,100,100,50);
   }
   
-  if (x >= 2700 && x < 2701 ) {
+  if (x == 2700) {
     fill(120,100,200,150);
     ellipse(300,300,100,100);
   }
   
-  if (x >= 3000 && x < 3001) {
+  if (x == 3000) {
     fill(60,100,200,150);
     ellipse(500,500,100,50);
   }
