@@ -58,4 +58,6 @@ void mouseWheel() {
 void keyPressed() {
   fill(#ffff00);
   rect((keyCode%20)*(width/20),0,width/20,height);
+  
+
 }
