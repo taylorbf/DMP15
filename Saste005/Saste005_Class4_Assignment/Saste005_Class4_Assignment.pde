@@ -17,21 +17,22 @@ void setup() {
   background(255);
 }
 void draw() {
+  println(mouseX,mouseY);
   noStroke();
   smooth();
-  fill(r,g,b,25);
+  fill(r,g,b,5);
   ellipse(width/2,height/2,mouseX-400,mouseY+400);
   r = (mouseX+mouseY)/10;
   g = (mouseX+mouseY)/10;
-  fill(r2,g2,b2,50);
+  fill(r2,g2,b2,5);
   ellipse(width/2,height/2,mouseX+300,mouseX-300);
   b2 = (mouseX+mouseY)/10;
   g2 = (mouseX+mouseY)/10;
-  fill(r3,g3,b3,25);
+  fill(r3,g3,b3,5);
   ellipse(width/2,height/2,mouseY-300,mouseY+300);
   r3 = (mouseX+mouseY)/10;
   b3 = (mouseX+mouseY)/10;
-  fill(r4,g4,b4,25);
+  fill(r4,g4,b4,5);
   beginShape();
   vertex(width/2,height/2);
   vertex(mouseX,mouseY);
@@ -54,7 +55,7 @@ void draw() {
   endShape();
   r4 = (mouseX+mouseY)/10;
   b4 = (mouseX+mouseY)/10;
-  fill(200,100,50,50);
+  fill(200,100,50,5);
   beginShape();
   vertex(500,mouseY);
   vertex(600,mouseY);
@@ -65,7 +66,7 @@ void draw() {
   vertex(mouseX,500);
   vertex(mouseX,400);
   endShape();
-  fill(100,75,50,100);
+  fill(100,75,50,5);
   beginShape();
   vertex(mouseX,500);
   vertex(mouseX,400);
@@ -84,7 +85,7 @@ void draw() {
   vertex(600,mouseY);
   vertex(mouseX,500);
   endShape();
-  fill(50,75,250,255);
+  fill(r,75,250,255);
   beginShape();
   vertex(mouseX,500);
   vertex(mouseX,400);
@@ -94,3 +95,8 @@ void draw() {
   endShape(); 
 }
 
+void keyPressed() {
+  r = random(255);
+  g = random(255);
+  b = random(255);
+  }
