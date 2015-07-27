@@ -1,6 +1,6 @@
 int x = 1;
 void setup() {
-  size(400,400);
+  size(800,800);
 }
 
 void draw() {
@@ -12,28 +12,31 @@ void draw() {
   //x = x + 5;
   fill(255);
   beginShape();
-  vertex(mouseX+3,mouseY+3);
-  vertex(144,289);
-  vertex(399,102);
+  vertex(312,250); //nose
+  vertex(144,200); //left wing
+  vertex(399,160); //right wing
   endShape(CLOSE);
+  
   fill(44,235,0);
+  
   beginShape();
-  strokeWeight(20);
+  strokeWeight(15);
   vertex(196,201);
-  vertex(mouseX,mouseY);
+  vertex(312,333); //312,333
   vertex(175,265);
   endShape(CLOSE);
   
+  
   beginShape();
   vertex(175,265);
-  vertex(mouseX,mouseY);
+  vertex(312,333);
   vertex(196,201);
   endShape(CLOSE);
   
   beginShape();
   vertex(196,201);
   vertex(265,200);
-  vertex(mouseX,mouseY);
+  vertex(312,333);
   endShape(CLOSE);
   
   //strokeWeight(60);
