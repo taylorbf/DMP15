@@ -1,5 +1,3 @@
-int canvas = 800;
-
 void setup() {
   size(canvas,canvas);
   frameRate(65);
@@ -15,9 +13,6 @@ void draw() {
 void mouseMoved() {
   stroke(random(100,255),random(100,255),random(100,255));
   strokeWeight(7);
-   
-println(mouseX);
-println(mouseY);
 
   line(mouseX,mouseX,mouseX,mouseY);  
 
