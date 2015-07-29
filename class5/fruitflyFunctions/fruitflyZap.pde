@@ -13,7 +13,7 @@ void draw() {
    fill(0,flyAlpha);
    ellipse(flyX,flyY,flySize,flySize);
    fly();
-   zap(50,50);
+   zap();
 }
 
 void fly() {
@@ -21,23 +21,21 @@ void fly() {
    flyY = flyY + random(-3,3); 
 }
 
-void zap(newX, newY) {
-  //something happens in here
-  
+void zap() {  
    if (flyX > width) {
-      flyX = newX;
+      flyX = width/2;
       background(255,255,0);
    }
    if (flyX < 0) {
-      flyX = newX;
+      flyX = width/2;
       background(255,255,0);
    }
    if (flyY > height) {
-      flyY = newY;
+      flyX = height/2;
       background(255,255,0);
    }
    if (flyY < 0) {
-      flyY = newY;
+      flyX = height/2;
       background(255,255,0);
    }
 }

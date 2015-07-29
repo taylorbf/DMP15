@@ -37,41 +37,35 @@ void draw() {
 ************/
 
 void mousePressed() {
-  if (timer < 300) {
-    points = points + 7;
-  }
+  pointsUp(8);
   
 }
 
 void mouseMoved() {
-  if (timer < 300) {
-    points = points + 1;
-  }
+  pointsUp(15);
 }
 
 void mouseReleased() {
-  if (timer < 300) {
-    points = points + 9;
-  }
+  pointsUp(1);
 }
 
 // Nice mouse extras!
 
 void mouseDragged() {
-  if (timer < 300) {
-    points = points + 8;
-  }
+   pointsUp(6);
 }
 
 void mouseWheel() {
-  if (timer < 300) {
-    points = points + 2;
-  }
+   pointsUp(2);
 }
 
 void keyPressed() {
+   pointsUp(4);
+}
+
+void pointsUp(int increase) {
   if (timer < 300) {
-    points = points + 4;
+    points = points + increase;
   } 
 }
 
