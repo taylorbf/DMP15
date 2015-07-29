@@ -11,9 +11,9 @@ void draw() {
   smooth();
   int x = width/2;
   int y = height/2;
-  fill(mouseX/10,mouseY/10,0,5);
+  fill(mouseX/10,mouseY/10,0,150);
   ellipse(x,y,mouseX-400,mouseY+400);
-  fill(mouseX/10,0,mouseY/10,50);
+  fill(mouseX/10,0,mouseY/10,150);
   ellipse(x,y,width-mouseX,height-mouseY);
   stroke(255);
   strokeWeight(1);
@@ -30,7 +30,8 @@ void draw() {
   endShape();
   if (mousePressed) {
   for (int i = 0; i < 100; i = i + 1) {
-    noStroke();
+    stroke(255,100);
+    strokeWeight(1);
     smooth();
     fill(mouseX,mouseY,100,20);
     ellipse(i * mouseX,i * mouseY,random(200),random(200));
