@@ -2,6 +2,8 @@ float a= 40;
 float b= 30;
 float i = 1.01;
 float x=600, y=400, bsize=20, speed=5;
+float rectWidth = 0;
+
 void setup(){
 
 size (600,400);
@@ -18,6 +20,13 @@ void draw() {
   rect (a*3+a*2+a,b*3+b*2+b,a*4,b*4,(40));
   rect (a*4+a*3+a*2+a,b*4+b*3+b*2+b,random(a*5),b*5);
  
+  rectWidth = random(a);
+  rect (width - rectWidth,0,rectWidth,b);
+  
+  rect (width - a,b,a*2,b*2,(30));
+  rect (width - a*2+a,b*2+b,random(a*3),b*3);
+  rect (a*3+a*2+a,b*3+b*2+b,a*4,b*4,(40));
+  rect (a*4+a*3+a*2+a,b*4+b*3+b*2+b,random(a*5),b*5);
  
   a = a + i;
   b = b + i;
