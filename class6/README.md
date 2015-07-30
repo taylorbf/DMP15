@@ -69,7 +69,7 @@ class Raindrop {
     stroke(#559ADE);
     line(x,y,x,y+50);
     
-    y += 5;
+    y = y + 5;
      
   }
   
