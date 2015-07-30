@@ -1,152 +1,249 @@
-# Video Signal Processing
+# Class 6: Object-Oriented Programming
 
-![](pic.jpeg)![](pic.jpeg)![](pic.jpeg)
+In the real world, objects are multiplicitous. The world does not contain just one raindrop, it contains many raindrops. They are all similar -- you could say they are created from the same **template** -- but each raindrop is slightly different, and each acts independently.
 
+#### The Problem with Coding Many Raindrops
 
-## Basic Video In & Out
-
-The `processing.video` library contains a Capture class for accessing a computer's video camera.
-
-This code reads almost like plain English:
-
+Sooner or later, you will be sketching out a raindrop:
 
 ```
-import processing.video.*;
-Capture video;
+float raindropX = 100;
+float raindropY = 0;
 
-void setup() {
-
-  // Define and start video capture
-  video = new Capture(this, width, height);
-  video.start();
-  
+void fall() {
+  raindropY = raindropY - 5;
 }
 
-void draw() {  
+```
+
+And it will dawn on you -- I want two raindrops! Then you will write something like this:
+
+```
+float raindropX = 100;
+float raindropY = 0;
+
+float raindrop2X = 100;
+float raindrop2Y = 0;
+
+void fall() {
+  raindropY = raindropY - 5;
+}
+
+void fall2() {
+  raindrop2Y = raindrop2Y - 5;
+}
+
+```
+
+Then you will break down and cry, because now you want 100 raindrops, and that is going to take hours.
+
+*There must be a better way*, you will think to yourself. 
+
+There is!
+
+
+## Class
+
+A class is a way to create many self-contained, independent objects which are similar.
+
+**You can think of a class definition as similar to a template. You can create any number of objects from that template.**
+
+If you turn our fruitfly into a class, you can then create 100 fruitflies with little effort.
+
+**Definition**
+
+Creating the class template will look something like this:
+
+```
+class Raindrop {
   
-  // Read video frame and draw it to canvas as image
-  if (video.available()) { 
-    video.read();
-    image(video, 0, 0);
+  int x = 0;
+  int y = 0;
+  
+  Raindrop(int setx) {
+    x = setx;
+  }
+  
+  void fall() {
+  
+    stroke(#559ADE);
+    line(x,y,x,y+50);
+    
+    y = y + 5;
+     
   }
   
 }
-```
-
-See the VideoBasic sketch in this folder to try out this code.
-
-## Video Processing
-
-Much more can be done to alter the video stream before it is drawn.
-
-### What is a Video, Really?
-
-A video is a series of images. Each image is called one "frame" of the video.
-
-Each frame of a video is *just data*. Specifically, it is a long list of numbers. **More specifically, it is a list of color information for each pixel in the video.**
-
-This list of color data is an **Array** of colors. This makes sense, because it is a list of related information.
-
-### Entering the Matrix
-
-Within the `draw()` function, you can use `video.loadPixels()` to acces the video's array of pixels.
-
-You can then loop through the array and make changes to individual pixels.
 
 ```
-void draw() {  
-  if (video.available()) {
+
+**Instance**
+
+Creating an instance of the Raindrop is now every easy:
+
+```
+Raindrop drop = new Raindrop(50)
+```
+
+Making it fall:  `drop.fall()`
+
+Getting its y position:   `drop.y`
+
+Create another instance of Raindrop:
+
+```
+Raindrop drop2 = new Raindrop(100)
+```
+
+Too bad I forgot my umbrella class.
+
+## Class Definition
+
+Let's break it down.
+
+**Components of a Class Definition**
+
+- Wrapper
+- Internal variables
+- Constructor function
+	- Constructor arguments
+- Internal functions
+
+##### Wrapper
+
+Your class must be wrapped in a class declaration
+
+```
+class Raindrop {
+
+
+}
+
+```
+
+##### Internal Variables
+
+Variables defined inside your class are **local**. They cannot be used outside your class.  
+
+In this case, a new local x and y variable will be created **for each raindrop.**
+
+```
+class Raindrop {
+
+	int x = 0;
+    int y = 0;
+
+}
+
+```
+
+
+
+##### Constructor Function & Arguments
+
+Each class contains a constructor function which acts like a setup function. It is called once for each instance, at the moment the instance is created.
+
+```
+class Raindrop {
+
+	int x = 0;
+    int y = 0;
+
+	Raindrop(int setx) {
+   		x = setx;
+  	}
+  	
+}
+
+```
+
+Here, we also include an argument, `setx`, which lets us set the x location of our raindrop.
+
+##### Internal Functions (Class Methods)
+
+Lastly, we can add any number of functions inside our class. These will be functions which *affect only our class instance*.
+
+Here we create a `fall()` function which causes the raindrop to move and be redrawn
+
+
+```
+class Raindrop {
   
-    video.read();
-    video.loadPixels();
-    
-    // Loop through video pixel array
-    for (int i = 0; i < video.pixels.length; i++) {
-    
-            
-   		// Access the current pixel  
-       	color pxcol = video.pixels[i];
-       	
-       	
-       	// Do something creative here with the pixel's color
-       	
-       
-       	// Set the pixel color
-       	video.pixels[i] = pxcol;
-      
-      
-    }
-    
-    video.updatePixels();
-    image(video,0,0);
+  int x = 0;
+  int y = 0;
+  
+  Raindrop(int setx) {
+    x = setx;
   }
+  
+  void fall() {
+  
+    stroke(#559ADE);
+    line(x,y,x,y+50);
+    
+    y += 5;
+     
+  }
+  
 }
 
 ```
 
+That is our full class definition. But, you could keep building it by adding any number of addition class methods.
 
-### Ideas for Altering Pixels
 
-##### Set every pixel to the same color 
+## Class Instance
 
-```
-video.pixels[i] = rgb(0,125,255);
-```
-
-##### Make a black and white video
-
-Get each pixel's brightness. If it is less than average, make the pixel black. Otherwise, make the pixel white.
+Now you can create an individual, self-contained raindrop:
 
 ```
-float pxbright = brightness( video.pixels[i] );
-
-if (pxbright < 127) {
-    video.pixels[i] = color(0)
-} else {
-	video.pixels[i] = color(255)
-}
-
+Raindrop drop = new Raindrop(50)
 ```
 
-Try adding more "if" conditions to this. 
-
-Try making it interactive with the mouse.
-
-
-### Useful tools
-
-##### Brightness
+To make it move:
 
 ```
-float value = brightness( pxcol );
+drop.fall()
 ```
 
-`value` will now be a number, 0-255, which you could use in some way.
-
-##### Hue
+To make another raindrop:
 
 ```
-float value = hue( pxcol );
+Raindrop drop2 = new Raindrop(20)
 ```
 
-`value` will now be a number, 0-255, which you could use in some way.
-
-##### Extract Red, Green, or Blue Level
-
-Extract the red level from the pixel's color
+To make it our second raindrop move:
 
 ```
-float value = red( pxcol );
+drop2.fall()
 ```
 
-`value` will now be a number, 0-255, which you could use in some way. 
+Tomorrow we will look at ways to manage hundreds of instances of an object without needing to call them `drop`, `drop2`, `drop3`, etc.
 
+## Object Oriented Programming
 
+Using classes is an example of object-oriented programming (OOP).
 
+In OOP, ideas/objects are programmed as self-contained entities with characteristics (properties) and actionable abilities (methods). 
 
-## Context
+In our case, `Raindrop` is our class and `drop` is our instance. `.fall()` is an action which our `drop` can do. This is written as `drop.fall()`.
+
 
 
 ## Assignment
 
-Work on your second midterm assignment, due on the last day of residency. You may use video processing in your project, but you don't have to.
+Turn your *digital object* into a class.
+
+Advice: Think in terms of designing an **object**, and consider the following:
+
+- What does the object **do**? 
+	- (Let this guide your Class Methods)
+- What parts of the object will **change over time**?
+	- (Let this guide your Internal Variables) 
+- How will each instance be **different** than another? 
+	- (Let this guide your Arguments)
+
+
+
+
+
