@@ -27,7 +27,11 @@ class Lineangle {
       moveY = moveY * -1;
     }
     stroke(0,255);
-    strokeWeight(2);
+    if (pointX >= 0) {
+      strokeWeight(pointX/24);
+    } else { 
+      strokeWeight(pointX/-23);
+    }
       for (int i = 0; i < 50; i = i + 10) {
       line(i+pointX,i+pointY, width/4 - (i+pointX), i+pointY);
      }
