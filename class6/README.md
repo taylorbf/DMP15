@@ -85,6 +85,10 @@ Creating an instance of the Raindrop is now every easy:
 Raindrop drop = new Raindrop(50)
 ```
 
+Making it fall:  `drop.fall()`
+
+Getting its y position:   `drop.y`
+
 Create another instance of Raindrop:
 
 ```
