@@ -25,7 +25,12 @@ class Mover {
     if (pointY > height || pointY < 0) { 
       moveY = moveY * -1;
     }
-     ellipse(pointX,pointY,100,100);
+    stroke(0,255);
+    strokeWeight(2);
+      for (int i = 0; i < 130; i = i + 10) {
+      line(i+pointX,i+pointY, width/2 - i, i);
+     }
+     //ellipse(pointX,pointY,100,100);
       pointX = pointX + moveX;
       pointY = pointY + moveY;
     //if (pointY > height || pointY < 0) {
