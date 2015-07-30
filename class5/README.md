@@ -1,4 +1,4 @@
-# Class 4: Reusable Code
+# Class 5: Reusable Code
 
 
 
@@ -43,7 +43,7 @@ In this example, an argument is added to our `grow` function. The argument is gi
 ```
 int height = 0;
 
-void growBy(inches) {
+void growBy(int inches) {
   height = height + inches;
 }
 ```
@@ -64,7 +64,7 @@ As you can see, writing functions can make your code more readable.
 You can add as many arguments to a function as you want.
 
 ```
-void growBy(feet,inches) {
+void growBy(int feet, int inches) {
    height = height + (feet*12) + inches;
 }
 
