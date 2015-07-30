@@ -1,4 +1,4 @@
-# Class 5: Object-Oriented Programming
+# Class 6: Object-Oriented Programming
 
 In the real world, objects are multiplicitous. The world does not contain just one raindrop, it contains many raindrops. They are all similar -- you could say they are created from the same **template** -- but each raindrop is slightly different, and each acts independently.
 
