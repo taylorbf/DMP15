@@ -1,4 +1,4 @@
-Fruitfly[] flies = new Fruitfly[100];
+Fruitfly[] flies = new Fruitfly[1000];
 
 void setup() {
   size(600,600);
