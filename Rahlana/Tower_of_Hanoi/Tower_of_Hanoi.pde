@@ -1,6 +1,7 @@
 int pole1 = 100;
 int pole2 = 200;
 int pole3 = 300;
+
 brick b1 = new brick(1,1);
 brick b2 = new brick(1,2);
 brick b3 = new brick(1,3);
@@ -10,8 +11,7 @@ brick[] Bricks = {b1,b2,b3,b4,b5};
 
 void setup(){
   size(1280,720);
-  frameRate(1);
-  
+  frameRate(2);
   
 }
 
@@ -60,6 +60,6 @@ class brick{
   void moveDisk(int toPole){
     poleLocation = toPole;
   
-}
+  }
 
 }
