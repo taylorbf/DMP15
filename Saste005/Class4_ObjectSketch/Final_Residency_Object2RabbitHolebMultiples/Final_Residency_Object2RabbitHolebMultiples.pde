@@ -27,7 +27,7 @@ class Lineangle {
     if (pointY > height || pointY < 0) { 
       moveY = moveY * -1;
     }
-    stroke(0,255);
+    stroke(0,150);
     if (pointX >= 0) {
       strokeWeight(pointX/11);
     } else { 
