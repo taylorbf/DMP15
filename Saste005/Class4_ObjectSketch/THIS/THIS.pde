@@ -1,7 +1,6 @@
 /*Lineangle lineangleA1 = new Lineangle();*/
 
   float pointX1 = 0; 
-  //change to 250 to reverse strokewidth and vertical orientation
   float pointY1 = 0;
   float moveX1 = 1;
   float moveY1 = 1;
@@ -25,6 +24,32 @@
   float pointY6 = 0;
   float moveX6 = 1;
   float moveY6 = 1;
+  float pointX7 = 0;
+  float pointY7 = 0;
+  float moveX7 = 1;
+  float moveY7 = 1;
+  float pointX8 = 0;
+  float pointY8 = 0;
+  float moveX8 = 1;
+  float moveY8 = 1;
+  float pointX9 = 0;
+  float pointY9 = 0;
+  float moveX9 = 1;
+  float moveY9 = 1;
+  float pointX10 = 0;
+  float pointY10 = 0;
+  float moveX10 = 1;
+  float moveY10 = 1;
+  float pointX11 = 0;
+  float pointY11 = 0;
+  float moveX11 = 1;
+  float moveY11 = 1;
+  float pointX12 = 0;
+  float pointY12 = 0;
+  float moveX12 = 1;
+  float moveY12 = 1;
+  //change move floats to adjust speed
+  //change to 250 to reverse strokewidth and vertical orientation
   
   
 
@@ -46,8 +71,20 @@ void draw() {
     pointY5 = pointY5 + moveY5;
     pointX6 = pointX6 + moveX6;
     pointY6 = pointY6 + moveY6;
+    pointX7 = pointX7 + moveX7;
+    pointY7 = pointY7 + moveY7;
+    pointX8 = pointX8 + moveX8;
+    pointY8 = pointY8 + moveY8;
+    pointX9 = pointX9 + moveX9;
+    pointY9 = pointY9 + moveY9;
+    pointX10 = pointX10 + moveX10;
+    pointY10 = pointY10 + moveY10;
+    pointX11 = pointX11 + moveX11;
+    pointY11 = pointY11 + moveY11;
+    pointX12 = pointX12 + moveX12;
+    pointY12 = pointY12 + moveY12;
    
-    //LINEANGLE1
+    //LINEANGLE1 (12)
      if (pointX1 > width || pointX1 < 0) { 
       moveX1 = moveX1 * -1;
     }
@@ -55,7 +92,7 @@ void draw() {
       moveY1 = moveY1 * -1;
     }
     stroke(0,150);
-    if (pointY1 >= 0 && pointX1 >=0) {
+    if (pointY1 >= 0 && pointY1 >=0) {
       strokeWeight(pointY1/11);
     } else { 
       strokeWeight(pointY1/-23);
@@ -64,7 +101,7 @@ void draw() {
       line(i+pointX1,i+pointY1, i + pointX1, height/4 - (i+pointY1));
      }
     
-    //LINEANGLE2 
+    //LINEANGLE2 (1)
     if (pointX2 > width/8 || pointX2 < 0) { 
       moveX2 = moveX2 * -1;
     }
@@ -81,7 +118,7 @@ void draw() {
       line(i+pointX2,i+pointY2, width/4 - (i+pointX2), i+pointY2);
      }
      
-    //LINEANGLE3
+    //LINEANGLE3 (2)
     if (pointX3 > width/8 || pointX3 < 0) { 
       moveX3 = moveX3 * -1;
     }
@@ -95,10 +132,10 @@ void draw() {
       strokeWeight(pointX3/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX3+(width/2),i+pointY3, width/2 - (i+pointX3), i+pointY3);
+      line(-i+pointX3+(width/2),i+pointY3, width/2 - (-i+pointX3), i+pointY3);
      }
     
-    //LINEANGLE4
+    //LINEANGLE4 (8)
     if (pointX4 > width/8 || pointX4 < 0) { 
       moveX4 = moveX4 * -1;
     }
@@ -112,10 +149,10 @@ void draw() {
       strokeWeight(pointX4/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX4 + (width/2),i+pointY4*-1+height, width/2 - (i+pointX4), i+pointY4*-1+height);
+      line(-i+pointX4 + (width/2),i+pointY4*-1+height, width/2 - (-i+pointX4), i+pointY4*-1+height);
       }
     
-    //LINEANGLE5
+    //LINEANGLE5 (3)
     if (pointX5 > width/8 || pointX5 < 0) { 
       moveX5 = moveX5 * -1;
     }
@@ -132,7 +169,7 @@ void draw() {
       line(i+pointX5+(width*.75),i+pointY5, width - (i+pointX5), i+pointY5);
      }
     
-    //LINEANGLE6
+    //LINEANGLE6 (9)
     if (pointX6 > width/8 || pointX6 < 0) { 
       moveX6 = moveX6 * -1;
     }
@@ -147,6 +184,108 @@ void draw() {
     }
       for (int i = 0; i <125; i = i + 10) {
       line(i+pointX6,i+pointY6*-1+height, width/4 - (i+pointX6), i+pointY6*-1+height);
+     }
+     
+    //LINEANGLE7 (11)
+     if (pointX7 > width || pointX7 < 0) { 
+      moveX7 = moveX7 * -1;
+    }
+    if (pointY7 > height/8 || pointY7 < 0) { 
+      moveY7 = moveY7 * -1;
+    }
+    stroke(0,150);
+    if (pointY7 >= 0 && pointY7 >=0) {
+      strokeWeight(pointY7/11);
+    } else { 
+      strokeWeight(pointY7/-23);
+    }
+      for (int i = 0; i <125; i = i + 10) {
+      line(i+pointX7,-i+pointY7+(height/2), i + pointX7, height/2 - (-i+pointY7));
+     }
+     
+     //LINEANGLE8 (10)
+     if (pointX8 > width || pointX8 < 0) { 
+      moveX8 = moveX8 * -1;
+    }
+    if (pointY8 > height/8 || pointY8 < 0) { 
+      moveY8 = moveY8 * -1;
+    }
+    stroke(0,150);
+    if (pointY8 >= 0 && pointY8 >=0) {
+      strokeWeight(pointY8/11);
+    } else { 
+      strokeWeight(pointY8/-23);
+    }
+      for (int i = 0; i <125; i = i + 10) {
+      line(i+pointX8,i+pointY8+(width*.75), i + pointX8, height - (i+pointY8));
+     }
+    
+    //LINEANGLE9 (7)
+    if (pointX9 > width/8 || pointX9 < 0) { 
+      moveX9 = moveX9 * -1;
+    }
+    if (pointY9 > height || pointY9 < 0) { 
+      moveY9 = moveY9 * -1;
+    }
+    stroke(0,150);
+    if (pointX9 >= 0) {
+      strokeWeight(pointX9/11);
+    } else { 
+      strokeWeight(pointX9/-23);
+    }
+      for (int i = 0; i <125; i = i + 10) {
+      line(i+pointX9+(width*.75),i+pointY9*-1+height, width - (i+pointX9), i+pointY9*-1+height);
+     }
+     
+     //LINEANGLE10 (4)
+     if (pointX10 > width || pointX10 < 0) { 
+      moveX10 = moveX10 * -1;
+    }
+    if (pointY10 > height/8 || pointY10 < 0) { 
+      moveY10 = moveY10 * -1;
+    }
+    stroke(0,150);
+    if (pointY10 >= 0 && pointY10 >=0) {
+      strokeWeight(pointY10/11);
+    } else { 
+      strokeWeight(pointY10/-23);
+    }
+      for (int i = 0; i <125; i = i + 10) {
+      line(i+pointX10*-1+width,i+pointY10, i + pointX10*-1+width, height/4 - (i+pointY10));
+     }
+    
+    //LINEANGLE11 (5)
+     if (pointX11 > width || pointX11 < 0) { 
+      moveX11 = moveX11 * -1;
+    }
+    if (pointY11 > height/8 || pointY11 < 0) { 
+      moveY11 = moveY11 * -1;
+    }
+    stroke(0,150);
+    if (pointY11 >= 0 && pointY11 >=0) {
+      strokeWeight(pointY11/11);
+    } else { 
+      strokeWeight(pointY11/-23);
+    }
+      for (int i = 0; i <125; i = i + 10) {
+      line(i+pointX11*-1+width,-i+pointY11+(height/2), i + pointX11*-1+width, height/2 - (-i+pointY11));
+     }
+    
+    //LINEANGLE8 (6)
+     if (pointX12 > width || pointX12 < 0) { 
+      moveX12 = moveX12 * -1;
+    }
+    if (pointY12 > height/8 || pointY12 < 0) { 
+      moveY12 = moveY12 * -1;
+    }
+    stroke(0,150);
+    if (pointY12 >= 0 && pointY12 >=0) {
+      strokeWeight(pointY12/11);
+    } else { 
+      strokeWeight(pointY12/-23);
+    }
+      for (int i = 0; i <125; i = i + 10) {
+      line(i+pointX12*-1+width,i+pointY12+(width*.75), i + pointX12*-1+width, height - (i+pointY12));
      }
      
 }
