@@ -3,12 +3,13 @@
   float pointX1 = 0; 
   //change to 250 to reverse strokewidth and vertical orientation
   float pointY1 = 0;
-  float pointX2 = 0;
-  float pointY2 = 0;
   float moveX1 = 1;
   float moveY1 = 1;
+  float pointX2 = 0;
+  float pointY2 = 0;
   float moveX2 = 1;
   float moveY2 = 1;
+  
   
 
 void setup() {
@@ -17,12 +18,11 @@ void setup() {
 
 void draw() {
   background(255);
-  /*lineangleA1.lineangleMove1();
-  lineangleA1.lineangleMove2();
-  lineangleA1.lineangleMove3();
-  lineangleA1.lineangleMove4();
-  lineangleA1.lineangleMove5();
-  lineangleA1.lineangleMove6();*/
+    pointX1 = pointX1 + moveX1;
+    pointY1 = pointY1 + moveY1;
+    pointX2 = pointX2 + moveX2;
+    pointY2 = pointY2 + moveY2;
+   
   
      if (pointX1 > width || pointX1 < 0) { 
       moveX1 = moveX1 * -1;
