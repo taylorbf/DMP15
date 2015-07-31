@@ -44,10 +44,6 @@ class Bar {
 Bar() {
 
 }
-
-for(i=1; i < 500; i = i + q/pow(2)) {
-  rect(0,i,width,height/q);
-}
   
 void moveLeft (){
   rect(x,y,bW,bH/n);
@@ -59,6 +55,6 @@ void moveRight (){
   q = q + speed;
   }
  }
-}
+
 
 
