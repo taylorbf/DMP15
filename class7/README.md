@@ -24,7 +24,7 @@ Often, you need to program a collection of related variables.
 
 #### Example 1: An array of integers
 
-Weather data:
+Previously, you might program weather data like this:
 
 ```
 forecastDay1 = 72;
