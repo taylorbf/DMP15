@@ -10,7 +10,8 @@ void draw() {
 }
 
 class Lineangle {
-  float pointX = 0;
+  float pointX = 0; 
+  //change to 250 to reverse strokewidth and vertical orientation
   float pointY = 0;
   float moveX = 1;
   float moveY = 1;
@@ -20,7 +21,7 @@ class Lineangle {
   }
   
   void lineangleMove() {
-    if (pointX > width/4 || pointX < 0) { 
+    if (pointX > width/8 || pointX < 0) { 
       moveX = moveX * -1;
     }
     if (pointY > height || pointY < 0) { 
@@ -28,11 +29,11 @@ class Lineangle {
     }
     stroke(0,255);
     if (pointX >= 0) {
-      strokeWeight(pointX/24);
+      strokeWeight(pointX/11);
     } else { 
       strokeWeight(pointX/-23);
     }
-      for (int i = 0; i < 50; i = i + 10) {
+      for (int i = 0; i <125; i = i + 10) {
       line(i+pointX,i+pointY, width/4 - (i+pointX), i+pointY);
      }
      //ellipse(pointX,pointY,100,100);
