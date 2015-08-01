@@ -1,11 +1,12 @@
-int size = 900;
+int size = 500;
+float speed = 3;
 int argnum = 2;
-Bar [] phase1 = new Bar [1]; 
+Bar [] phase = new Bar [1]; 
 
 void setup () {
  size (size,size); 
- for(int i = 0; i < phase1.length; i = i + 1) {
-   phase1[i] = new Bar(height*i/phase1.length,(height/2)/phase1.length+1); 
+ for(int i = 0; i < phase.length; i = i + 1) {
+   phase[i] = new Bar(height*i/phase.length,(height/2)/phase.length+1); 
  }
 }
 
@@ -14,9 +15,9 @@ void draw () {
  noStroke();
  fill(7,106,232); 
  //round(i);
- for(int i = 0; i < phase1.length; i++) {
-  phase1[i].moveLeft();
-  phase1[i].moveRight();
+ for(int i = 0; i < phase.length; i++) {
+  phase[i].moveLeft();
+  phase[i].moveRight();
  }
 } 
 
@@ -26,7 +27,6 @@ class Bar {
 float x = 0;
 float y = 0;
 float q = 0;
-float speed = 5;
 float bW = width;
 float bH;
 
@@ -45,9 +45,9 @@ void moveRight (){
   rect(q,y+bH,bW,bH);
   q = q + speed;
    if (q > size) {
-   phase1 = new Bar [argnum]; 
-   for(int i = 0; i < phase1.length; i = i + 1) {
-   phase1[i] = new Bar(height*i/phase1.length,(height/2)/phase1.length+1);
+   phase = new Bar [argnum]; 
+   for(int i = 0; i < phase.length; i = i + 1) {
+   phase[i] = new Bar(height*i/phase.length,(height/2)/phase.length+1);
    argnum = argnum + 1; 
    }
   }
