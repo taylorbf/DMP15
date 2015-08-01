@@ -32,17 +32,17 @@ void draw() {
         // Where are we, pixel-wise?
         int x = i*cellSize;
         int y = j*cellSize;
-        int loc = x + y*video.width; // Reversing x to mirror the image
+        int loc = x + y*video.width; 
       
         // Make a new color for this pixel of the video
         float r = red(video.pixels[loc]);
         float g = green(video.pixels[loc]);
         float b = blue(video.pixels[loc]);
-        color c = color(r, g, b);
+        color c = color(r, g, b,20);
       
           
         fill(c);
-        rect(x, y, cellSize, cellSize);
+        ellipse(width - x, height - y, cellSize, cellSize);
         
       }
     }
