@@ -149,4 +149,10 @@ float value = red( pxcol );
 
 ## Assignment
 
-Work on your second midterm assignment, due on the last day of residency. You may use video processing in your project, but you don't have to.
+Propose an idea for your final project, which will be due on the last day of the online portion of the class. This project may involve:
+
+- video processing
+- further exploration of your "class" (but it should be significant)
+- exploration of a new "class" 
+- another idea!
+	
