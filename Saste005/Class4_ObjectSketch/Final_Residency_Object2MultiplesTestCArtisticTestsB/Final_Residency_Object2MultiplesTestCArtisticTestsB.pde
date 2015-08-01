@@ -7,19 +7,19 @@ void setup() {
 void draw() {
   background(255);
   lineangleA1.lineangleMove1();
-  lineangleA1.lineangleMove2();
+  /*lineangleA1.lineangleMove2();
   lineangleA1.lineangleMove3();
   lineangleA1.lineangleMove4();
   lineangleA1.lineangleMove5();
-  lineangleA1.lineangleMove6();
+  lineangleA1.lineangleMove6();*/
 }
 
 class Lineangle {
   float pointX = 0; 
   //change to 250 to reverse strokewidth and vertical orientation
   float pointY = 0;
-  float moveX = .25;
-  float moveY = .25;
+  float moveX = 1;
+  float moveY = 1;
   
   
   Lineangle() {

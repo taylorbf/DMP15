@@ -84,7 +84,7 @@ void draw() {
     pointX12 = pointX12 + moveX12;
     pointY12 = pointY12 + moveY12;
    
-    //LINEANGLE1 (12)
+    /*//LINEANGLE1 (12)
      if (pointX1 > width || pointX1 < 0) { 
       moveX1 = moveX1 * -1;
     }
@@ -99,7 +99,7 @@ void draw() {
     }
       for (int i = 0; i <125; i = i + 10) {
       line(i+pointX1-125,i+pointY1, i + pointX1-125, height/4 - (i+pointY1));
-     }
+     }*/
     
     //LINEANGLE2 (1)
     if (pointX2 > width/8 || pointX2 < 0) { 
@@ -115,10 +115,10 @@ void draw() {
       strokeWeight(pointX2/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX2,i+pointY2-125, width/4 - (i+pointX2), i+pointY2-125);
+      line(-i+pointX2+width/8,i+pointY2-125, width/8 - (i+pointX2), i+pointY2-125);
      }
      
-    //LINEANGLE3 (2)
+    /*//LINEANGLE3 (2)
     if (pointX3 > width/8 || pointX3 < 0) { 
       moveX3 = moveX3 * -1;
     }
@@ -286,7 +286,7 @@ void draw() {
     }
       for (int i = 0; i <125; i = i + 10) {
       line(i+pointX12*-1+width,i+pointY12+(width*.75), i + pointX12*-1+width, height - (i+pointY12));
-     }
+     }*/
      
 }
 

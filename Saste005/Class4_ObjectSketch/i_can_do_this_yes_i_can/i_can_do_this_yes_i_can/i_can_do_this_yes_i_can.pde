@@ -115,7 +115,7 @@ void draw() {
       strokeWeight(pointX2/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX2,i+pointY2-125, width/4 - (i+pointX2), i+pointY2-125);
+      line((width/8 + pointX2) - i,i+pointY2-125, (width/8 + -pointX2) + i, i+pointY2-125);
      }
      
     //LINEANGLE3 (2)
@@ -131,10 +131,10 @@ void draw() {
     } else { 
       strokeWeight(pointX3/-23);
     }
-      for (int i = 0; i <125; i = i + 10) {
-      line(-i+pointX3+(width/2),i+pointY3-125, width/2 - (-i+pointX3), i+pointY3-125);
+      for (int i = 0; i <200; i = i + 10) {
+      line(i+pointX3+(width/2),i+pointY3-125, width/2 - (i+pointX3), i+pointY3-125);
      }
-    
+ 
     //LINEANGLE4 (8)
     if (pointX4 > width/8 || pointX4 < 0) { 
       moveX4 = moveX4 * -1;
@@ -151,7 +151,7 @@ void draw() {
       for (int i = 0; i <125; i = i + 10) {
       line(-i+pointX4 + (width/2),i+pointY4*-1+height, width/2 - (-i+pointX4), i+pointY4*-1+height);
       }
-    
+   
     //LINEANGLE5 (3)
     if (pointX5 > width/8 || pointX5 < 0) { 
       moveX5 = moveX5 * -1;
@@ -166,9 +166,10 @@ void draw() {
       strokeWeight(pointX5/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX5+(width*.75),i+pointY5-125, width - (i+pointX5), i+pointY5-125);
+      line((width*.87 + pointX5) - i,i+pointY5-125, (width*.87 +-pointX5) + i, i+pointY5-125);
      }
     
+     
     //LINEANGLE6 (9)
     if (pointX6 > width/8 || pointX6 < 0) { 
       moveX6 = moveX6 * -1;
@@ -185,7 +186,7 @@ void draw() {
       for (int i = 0; i <125; i = i + 10) {
       line(i+pointX6,i+pointY6*-1+height, width/4 - (i+pointX6), i+pointY6*-1+height);
      }
-     
+    
     //LINEANGLE7 (11)
      if (pointX7 > width || pointX7 < 0) { 
       moveX7 = moveX7 * -1;
@@ -290,136 +291,4 @@ void draw() {
      
 }
 
-/*class Lineangle {
-  /*float pointX = 0; 
-  //change to 250 to reverse strokewidth and vertical orientation
-  float pointY = 0;
-  float moveX = .25;
-  float moveY = .25;*/
-  
-  
-  /*Lineangle() {
-  }
-  
-  void lineangleMove1() {
-    if (pointX > width/8 || pointX < 0) { 
-      moveX = moveX * -1;
-    }
-    if (pointY > height || pointY < 0) { 
-      moveY = moveY * -1;
-    }
-    stroke(0,150);
-    if (pointX >= 0) {
-      strokeWeight(pointX/11);
-    } else { 
-      strokeWeight(pointX/-23);
-    }
-      for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX,i+pointY, width/4 - (i+pointX), i+pointY);
-     }
-     pointX = pointX + moveX;
-     pointY = pointY + moveY;
-     
-  }
-  void lineangleMove3() {
-    if (pointX > width/8 || pointX < 0) { 
-      moveX = moveX * -1;
-    }
-    if (pointY > height || pointY < 0) { 
-      moveY = moveY * -1;
-    }
-    stroke(0,150);
-    if (pointX >= 0) {
-      strokeWeight(pointX/11);
-    } else { 
-      strokeWeight(pointX/-23);
-    }
-      for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX+(width/2),i+pointY, width/2 - (i+pointX), i+pointY);
-     }
-     pointX = pointX + moveX ;
-     pointY = pointY + moveY;
-     
-  }
-  void lineangleMove5() {
-    if (pointX > width/8 || pointX < 0) { 
-      moveX = moveX * -1;
-    }
-    if (pointY > height || pointY < 0) { 
-      moveY = moveY * -1;
-    }
-    stroke(0,150);
-    if (pointX >= 0) {
-      strokeWeight(pointX/11);
-    } else { 
-      strokeWeight(pointX/-23);
-    }
-      for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX+(width*.75),i+pointY, width - (i+pointX), i+pointY);
-     }
-     pointX = pointX + moveX ;
-     pointY = pointY + moveY;
-     
-  }
-    void lineangleMove6() {
-    if (pointX > width/8 || pointX < 0) { 
-      moveX = moveX * -1;
-    }
-    if (pointY > height || pointY < 0) { 
-      moveY = moveY * -1;
-    }
-    stroke(0,150);
-    if (pointX >= 0) {
-      strokeWeight(pointX/11);
-    } else { 
-      strokeWeight(pointX/-23);
-    }
-      for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX,i+pointY*-1+height, width/4 - (i+pointX), i+pointY*-1+height);
-     }
-     pointX = pointX + moveX ;
-     pointY = pointY + moveY;
-     
-  }
-    void lineangleMove4() {
-    if (pointX > width/8 || pointX < 0) { 
-      moveX = moveX * -1;
-    }
-    if (pointY > height || pointY < 0) { 
-      moveY = moveY * -1;
-    }
-    stroke(0,150);
-    if (pointX >= 0) {
-      strokeWeight(pointX/11);
-    } else { 
-      strokeWeight(pointX/-23);
-    }
-      for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX + (width/2),i+pointY*-1+height, width/2 - (i+pointX), i+pointY*-1+height);
-     }
-     pointX = pointX + moveX ;
-     pointY = pointY + moveY;
-     
-  }
-  void lineangleMove2() {
-    if (pointX > width/8 || pointX < 0) { 
-      moveX = moveX * -1;
-    }
-    if (pointY > height || pointY < 0) { 
-      moveY = moveY * -1;
-    }
-    stroke(0,150);
-    if (pointX >= 0) {
-      strokeWeight(pointX/11);
-    } else { 
-      strokeWeight(pointX/-23);
-    }
-      for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX + (width*.75),i+pointY*-1+height, width - (i+pointX), i+pointY*-1+height);
-     }
-     pointX = pointX + moveX ;
-     pointY = pointY + moveY;  
-  }
-  
-}*/ 
-  
+

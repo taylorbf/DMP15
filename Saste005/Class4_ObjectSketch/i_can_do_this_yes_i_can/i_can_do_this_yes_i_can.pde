@@ -84,7 +84,7 @@ void draw() {
     pointX12 = pointX12 + moveX12;
     pointY12 = pointY12 + moveY12;
    
-    //LINEANGLE1 (12)
+    /*//LINEANGLE1 (12)
      if (pointX1 > width || pointX1 < 0) { 
       moveX1 = moveX1 * -1;
     }
@@ -99,7 +99,7 @@ void draw() {
     }
       for (int i = 0; i <125; i = i + 10) {
       line(i+pointX1-125,i+pointY1, i + pointX1-125, height/4 - (i+pointY1));
-     }
+     }*/
     
     //LINEANGLE2 (1)
     if (pointX2 > width/8 || pointX2 < 0) { 

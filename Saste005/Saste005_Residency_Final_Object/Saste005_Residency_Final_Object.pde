@@ -1,5 +1,3 @@
-/*Lineangle lineangleA1 = new Lineangle();*/
-
   float pointX1 = 0; 
   float pointY1 = 0;
   float moveX1 = 1;
@@ -48,6 +46,7 @@
   float pointY12 = 0;
   float moveX12 = 1;
   float moveY12 = 1;
+  
   //change move floats to adjust speed
   //change to 250 to reverse strokewidth and vertical orientation
   
@@ -55,10 +54,13 @@
 
 void setup() {
   size(1000,1000);
+  //background(255);
+  //fill(255,5);
+  //rect(0,0, width,height);
 }
 
 void draw() {
-  background(255);
+    background(255);
     pointX1 = pointX1 + moveX1;
     pointY1 = pointY1 + moveY1;
     pointX2 = pointX2 + moveX2;
@@ -98,10 +100,12 @@ void draw() {
       strokeWeight(pointY1/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX1-125,i+pointY1, i + pointX1-125, height/4 - (i+pointY1));
+      line(i + pointX1-125,(height/8 + pointY1) - i, i + pointX1-125, (height/8 + -pointY1) + i);
+        //OLDCODE line(i+pointX1-125,i+pointY1, i + pointX1-125, height/4 - (i+pointY1));
+      //LINEANGLE1REF line((width/8 + pointX2) - i,i+pointY2-125, (width/8 + -pointX2) + i, i+pointY2-125);
      }
     
-    //LINEANGLE2 (1)
+  //LINEANGLE2 (1)
     if (pointX2 > width/8 || pointX2 < 0) { 
       moveX2 = moveX2 * -1;
     }
@@ -115,10 +119,10 @@ void draw() {
       strokeWeight(pointX2/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX2,i+pointY2-125, width/4 - (i+pointX2), i+pointY2-125);
+      line((width/8 + pointX2) - i,i+pointY2-125, (width/8 + -pointX2) + i, i+pointY2-125);
      }
      
-    //LINEANGLE3 (2)
+    /*//LINEANGLE3 (2)
     if (pointX3 > width/8 || pointX3 < 0) { 
       moveX3 = moveX3 * -1;
     }
@@ -132,10 +136,16 @@ void draw() {
       strokeWeight(pointX3/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
+      //line((width/2 + -pointX3) + i,i+pointY2-125, (width/2 + pointX3) - i, i+pointY3-125);
+      //line((width/2 + pointX3) - i,i+pointY2-125, (width/2 + -pointX3) + i, i+pointY3-125);
       line(-i+pointX3+(width/2),i+pointY3-125, width/2 - (-i+pointX3), i+pointY3-125);
-     }
+      //same size same expansion
+      //line(i+pointX3+(width/2),i+pointY3-125, width/2 - (i+pointX3), i+pointY3-125);
+      //line((width/2 + -pointX3) - i,i+pointY2-125, (width/2 + pointX3) + i, i+pointY3-125);
+      //cut off opposite expansion
+     }*/
     
-    //LINEANGLE4 (8)
+   /* //LINEANGLE4 (8)
     if (pointX4 > width/8 || pointX4 < 0) { 
       moveX4 = moveX4 * -1;
     }
@@ -149,8 +159,13 @@ void draw() {
       strokeWeight(pointX4/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(-i+pointX4 + (width/2),i+pointY4*-1+height, width/2 - (-i+pointX4), i+pointY4*-1+height);
-      }
+       line(i+pointX4+500,i+pointY4*-1+height, 500 - (i+pointX4), i+pointY4*-1+height);
+      //line(i+pointX4 + (width/2),i+pointY4*-1+height, width/2 - (i+pointX4), i+pointY4*-1+height);
+      //cut off triangle same expansion
+      //line(-i+pointX4 + (width/2),i+pointY4*-1+height, width/2 - (-i+pointX4), i+pointY4*-1+height);
+      //same size opposite expansion
+      
+      } */
     
     //LINEANGLE5 (3)
     if (pointX5 > width/8 || pointX5 < 0) { 
@@ -166,7 +181,7 @@ void draw() {
       strokeWeight(pointX5/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX5+(width*.75),i+pointY5-125, width - (i+pointX5), i+pointY5-125);
+      line((width*.87 + pointX5) - i,i+pointY5-125, (width*.87 +-pointX5) + i, i+pointY5-125);
      }
     
     //LINEANGLE6 (9)
@@ -186,7 +201,7 @@ void draw() {
       line(i+pointX6,i+pointY6*-1+height, width/4 - (i+pointX6), i+pointY6*-1+height);
      }
      
-    //LINEANGLE7 (11)
+    /*//LINEANGLE7 (11)
      if (pointX7 > width || pointX7 < 0) { 
       moveX7 = moveX7 * -1;
     }
@@ -200,8 +215,9 @@ void draw() {
       strokeWeight(pointY7/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX7-125,-i+pointY7+(height/2), i + pointX7-125, height/2 - (-i+pointY7));
-     }
+      line(i + pointX7-125,(height/4 + pointY7) - i, i + pointX7-125, (height/4 + -pointY7) + i);
+     // OLD CODEline(i+pointX7-125,-i+pointY7+(height/2), i + pointX7-125, height/2 - (-i+pointY7));
+     }*/
      
      //LINEANGLE8 (10)
      if (pointX8 > width || pointX8 < 0) { 
@@ -217,7 +233,8 @@ void draw() {
       strokeWeight(pointY8/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX8-125,i+pointY8+(width*.75), i + pointX8-125, height - (i+pointY8));
+     line(i + pointX8-125,(height*.87 + pointY8) - i, i + pointX8-125, (height*.87 + -pointY8) + i); 
+     //OLDCODE line(i+pointX8-125,i+pointY8+(width*.75), i + pointX8-125, height - (i+pointY8));
      }
     
     //LINEANGLE9 (7)
@@ -252,9 +269,10 @@ void draw() {
     }
       for (int i = 0; i <125; i = i + 10) {
       line(i+pointX10*-1+width,i+pointY10, i + pointX10*-1+width, height/4 - (i+pointY10));
+      //line(i+pointX10*-1,i+pointY10, i + pointX10*-1, height/4 - (i+pointY10));
      }
     
-    //LINEANGLE11 (5)
+    /*//LINEANGLE11 (5)
      if (pointX11 > width || pointX11 < 0) { 
       moveX11 = moveX11 * -1;
     }
@@ -268,8 +286,10 @@ void draw() {
       strokeWeight(pointY11/-23);
     }
       for (int i = 0; i <125; i = i + 10) {
-      line(i+pointX11*-1+width,-i+pointY11+(height/2), i + pointX11*-1+width, height/2 - (-i+pointY11));
-     }
+        //same size opposite expansion--same as lineangle(11)
+      line(i + pointX7*-1+width,(height/4 + pointY7) - i, i + pointX7*-1+width, (height/4 + -pointY7) + i);
+      //??line(i+pointX11*-1+width,i+pointY11+(height/4), i + pointX11*-1+width, height/4 - (i+pointY11));
+     }*/
     
     //LINEANGLE8 (6)
      if (pointX12 > width || pointX12 < 0) { 
