@@ -3,12 +3,9 @@
 //Size                        //Scratch
 //rotationSpeed               //Color
 
-
-//int recColor = rec(color(HSB), random(230), random(200));
-//int recSpin = 
-Spin[] crate = new Spin[20]; 
+ 
+Spin[] crate = new Spin[8]; //Array
 //Spin rec = new Spin();
-
 
 void setup () {
   size (800, 800);
@@ -16,9 +13,9 @@ void setup () {
   
 for (int i = 0; i < crate.length; i++) {
   crate [i] = new Spin();
-  crate[i].recX = random(600);
-  crate[i].recY = random(600);
-  
+  crate[i].recX = random(800);
+  crate[i].recY = random(900);
+  //crate[i].speed =;
   crate[i].drawRecord();
   }
 }
@@ -36,7 +33,6 @@ void draw() {
   
   for (int i = 0; i < crate.length; i++) {
   crate[i].drawRecord();
-  
   }
 }
 
@@ -46,8 +42,8 @@ class Spin {
   float recSize = 5;
   float speed = 0.1;
   float myRotation = 0;
-  color tColor = color(random(255),random(255), random(255));
-
+ 
+  
   Spin(){
     
     
@@ -55,21 +51,13 @@ class Spin {
   }
 
   void drawRecord(){
- //ROATAION
+ //ROTATION
     pushMatrix();
     translate(recX,recY);
     rotate(myRotation);
-    
+  
     fill(2);
     ellipse(0, 0, width/2, height/2);
-    
-    if (mousePressed){
-      fill(tColor);
-      ellipse(0, 0, width/2, height/2);
-      myRotation = 0;
-      }
-    
- 
   
   
     fill(255, 255, 255, 30);//white
@@ -102,33 +90,21 @@ class Spin {
     if (myRotation > TWO_PI) {
        myRotation = 0; 
       }
-      
        
-    }
-}
-/*
+  }
+
+
 void mousePressed() {
-       crate.speed = 0;
-       
-    
-  
-  //recRed = recRed-4;
-  //recGreen = recGreen/2;
-  //recBlue = recBlue/2;
-  
-  
-}
+       //make a loop
+      
+    }
   
 void mouseReleased(){
        rec.speed = 1;
-       translate(400,400);
-       fill(0,random(255),0);
-       ellipse(0, 0, width/2, height/2);
-*/
+    
+    }
 
-
-
-
+}
 
 
 

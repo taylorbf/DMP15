@@ -6,7 +6,7 @@
 
 //int recColor = rec(color(HSB), random(230), random(200));
 //int recSpin = 
-Spin[] crate = new Spin[20]; 
+Spin[] crate = new Spin[45]; 
 //Spin rec = new Spin();
 
 
@@ -69,8 +69,6 @@ class Spin {
       myRotation = 0;
       }
     
- 
-  
   
     fill(255, 255, 255, 30);//white
     smooth();
