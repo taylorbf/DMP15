@@ -1,6 +1,4 @@
-Diamond blueDmd = new Diamond(200,100,10); 
-Diamond blueDmd2 = new Diamond(40,90,10); 
-Diamond wholeShape[] = new Diamond[100];
+ Diamond wholeShape[] = new Diamond[100];
  
 void setup(){
   size(displayWidth,displayHeight);
@@ -11,7 +9,7 @@ void setup(){
 }
  
 void draw(){
-  background(255);
+  background(0,mouseX,mouseY);
   //diamonds all over
 for (int i=0; i< wholeShape.length;i++) {
 //i * controls spacing of diamond
