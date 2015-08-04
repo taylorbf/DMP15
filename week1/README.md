@@ -4,9 +4,10 @@
 
 Propose an idea for your final project, which will be due on the last day of the online portion of the class. This project may involve:
 
-- Explore *video processing* by hacking/modifying one of the video templates in the Class 8 folder.
+- Exploring *video processing* by hacking/modifying one of the video templates in the Class 8 folder.
 - Further exploration of your Class. 
 - Exploration of a new Class.
+- Exploration of P3D.
 - Another idea!
 
 Post your ~1 paragraph proposal to the discussion board. If you choose video processing, tell us which video sketch you plan to modify, and what your initial expectations or goals are. If you choose to create a new Class, tell us what it will be called, what it will look like, and what it will do. Please be descriptive!
