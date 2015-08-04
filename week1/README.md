@@ -4,17 +4,30 @@
 
 1) Propose an idea for your final project, which will be due on the last day of the online portion of the class. This project may involve:
 
-- Video processing by hacking/editing one of the video templates in Class 8.
-- Further exploration of your Class (but it should be significant)
-- Exploration of a new Class. If so, tell us what it will be called, and what it will do.
+- Explore *video processing* by hacking/modifying one of the video templates in the Class 8 folder.
+- Further exploration of your Class. 
+- Exploration of a new Class.
 - Another idea!
 
-2) Write a code poem.
+Post your ~1 paragraph proposal to the discussion board. If you choose video processing, tell us which video sketch you plan to modify, and what your initial expectations or goals are. If you choose to create a new Class, tell us what it will be called, what it will look like, and what it will do. Please be descriptive!
 
+2) Write a [code poem](https://en.wikipedia.org/wiki/Code_poetry). Post it to the discussion board.
 
+"Code poetry is literature that intermixes notions of classical poetry and computer code. Examples of code poetry include: poems written in a programming language, but human readable as poetry; computer code expressed poetically, that is, playful with sound, terseness, or beauty."
 
+Example of a code poem by Paul Hertz:
 
-Commit some code which is the barebones beginning of your Final Project. Examples: 
+```
+include everything.*;
+void wonder(Universe u) {
+  while (ever || never) {
+    for (Poem i in u.now()) {
+      Word dust = u.speak(i);
+      for (Moment mote in dust) {
+        wonder(new Universe(mote));
+      }
+    }
+  }
+}
 
-  - If doing video processing, choose which of the template sketches you plan to work with, and commit a copy of it in your own folder.
-  - If creating a new class, write a sketch with an empty class definition and give it a name. Add a few comments that describe what the class will do.
+```
