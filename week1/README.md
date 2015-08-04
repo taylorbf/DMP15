@@ -1,8 +1,6 @@
-# Due this week
+# Due this week by Friday @ 11:59 PM
 
-### By Friday @ 11:59 PM
-
-##### Final Project Proposal
+#### Final Project Proposal
 
 Propose an idea for your final project, which will be due on the last day of the online portion of the class. This project may involve:
 
@@ -13,7 +11,7 @@ Propose an idea for your final project, which will be due on the last day of the
 
 Post your ~1 paragraph proposal to the discussion board. If you choose video processing, tell us which video sketch you plan to modify, and what your initial expectations or goals are. If you choose to create a new Class, tell us what it will be called, what it will look like, and what it will do. Please be descriptive!
 
-##### Code Poem
+#### Code Poem
 
 Write a [code poem](https://en.wikipedia.org/wiki/Code_poetry). Post it to the discussion board.
 
