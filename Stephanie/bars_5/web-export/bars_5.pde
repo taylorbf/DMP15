@@ -1,10 +1,9 @@
-int size = 500
 float speed = 3;
 int argnum = 2;
 Bar [] phase = new Bar [1]; 
 
 void setup () {
- size (size,size); 
+ size (500,500); 
  for(int i = 0; i < phase.length; i = i + 1) {
    phase[i] = new Bar(height*i/phase.length,(height/2)/phase.length+1); 
  }
@@ -53,3 +52,4 @@ void moveRight (){
   }
   }
 }
+
