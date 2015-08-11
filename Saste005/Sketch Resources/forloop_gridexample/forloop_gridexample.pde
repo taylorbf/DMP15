@@ -1,16 +1,17 @@
 void setup() {
   size (500,500);
-  background (255);
+  
 }
 
 void draw() {
-  for (int i = 5; i < width; i = i + 10) {
-    for (int j = 5; j < height; j = j + 10) {
+  background (255);
+  for (int i = 25; i < width; i = i + 50) {
+    for (int j = 25; j < height; j = j + 50) {
       smooth();
-      fill(0);
+      fill(0,random(0,50));
       noStroke();
       ellipseMode(CENTER);
-      ellipse(i,j,10,10);
+      ellipse(i,j,50,50);
     }
    }
 }
