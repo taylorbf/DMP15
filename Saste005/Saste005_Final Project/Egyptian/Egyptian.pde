@@ -1,10 +1,15 @@
 PImage egyptian;
 
 void setup() {
-  size(500,500);
+  size(850,500);
+  
 }
 
 void draw(){
   egyptian = loadImage("Egyptian.jpg");
-  image(egyptian, mouseX-200,0, 1370,height);
+  image(egyptian, mouseX-700,0, 1370,height);
+  noStroke();
+  fill(255);
+  rect(0,0,175,500);
+  rect(675,0,250,500);
 }
