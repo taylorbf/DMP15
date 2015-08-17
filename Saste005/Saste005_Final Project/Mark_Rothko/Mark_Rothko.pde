@@ -6,6 +6,6 @@ void setup() {
 }
 
 void draw(){
-  tint(mouseY+100, mouseX+100, mouseY+100, 100);
+  tint(mouseY+50, mouseX+50, mouseY+50, 255);
   image(img, 0,0, width,height);
 }

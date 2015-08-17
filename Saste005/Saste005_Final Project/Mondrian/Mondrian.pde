@@ -33,14 +33,16 @@ void draw() {
           rect(k,l,50,50);
         }  
       }
-      if ((mouseX >= k && mouseX < k + 45) && (mouseY >= l && mouseY < l + 45) && mousePressed && keyPressed) {
+      if ((mouseX >= k - 25 && mouseX < k + 25) && (mouseY >= l - 25 && mouseY < l + 25) && mousePressed && keyPressed) {
         if (key == 'h') {
           stroke(0);
           strokeWeight(6);
+          strokeCap(PROJECT);
           line(k,l,k+50,l);
         } else if (key == 'v') {
           stroke(0);
           strokeWeight(6);
+          strokeCap(PROJECT);
           line(k,l,k,l+50);
         }
       }
