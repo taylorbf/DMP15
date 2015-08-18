@@ -13,11 +13,11 @@ void draw(){
   //diamonds all over
 for (int i=0; i< wholeShape.length;i++) {
 //i * controls spacing of diamond
-for (int s=0; s< 10 ;s++){
- wholeShape[i].diamondOut(i*100,200*s);
- wholeShape[i].diamondIn(i*100,200*s);
- wholeShape[i].diamondOut(100*s*2,i*100);
- wholeShape[i].diamondIn(100*s*2,i*100);
+for (int j=0; j< 10 ;j++){
+ wholeShape[i].diamondOut(i*100,200*j);
+ wholeShape[i].diamondIn(i*100,200*j);
+ wholeShape[i].diamondOut(100*j*2,i*100);
+ wholeShape[i].diamondIn(100*j*2,i*100);
 
   }
  
