@@ -6,14 +6,10 @@ int columns = 100;
 void setup() {
   size(500,500);
   stroke(0,0,200,50);
+  starry = loadImage("Starry Night.jpg");
 }
 
 void draw() {
-  if (mouseX<=5) {
-    pushMatrix();
-    popMatrix();
-  }
-    starry = loadImage("Starry Night.jpg");
     image(starry,0,0,width,height);
   if (mouseX > 5) {
     starry.loadPixels();
@@ -21,14 +17,11 @@ void draw() {
     int rowsize = int(starry.height / rows);
     int colsize = int(starry.width / columns);
     
-    float scaleX = width / rows;
-    float scaleY = height / columns;
-    
     for (int i=0; i<columns; i++) {
       for (int j=0; j<rows; j++) {
         int pxnum = i * mouseX/100 + j * mouseY/100 * starry.width;
         fill(starry.pixels[pxnum],100);
-        ellipse(i*scaleX,j*scaleY,random(scaleX,25),random(scaleY,25));
+        ellipse(i*rowsize,j*colsize,random(scaleX,25),random(scaleY,25));
       }
     }
   }
