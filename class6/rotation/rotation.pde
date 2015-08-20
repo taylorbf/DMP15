@@ -8,6 +8,7 @@ void draw() {
   background(0);
   
   rectMode(CENTER);
+  
   pushMatrix();
   translate(100,100);
   rotate(myRotation);
